@@ -4,6 +4,8 @@
  */
 package ui;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author 20211074010035
@@ -207,7 +209,8 @@ public class TrianguloUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+ 
+           
     private void cTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cTFActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cTFActionPerformed
@@ -222,6 +225,31 @@ public class TrianguloUI extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        
+           //INDICAR ALERTAS
+           if (aTF.getText().equals(" ")
+               ||bTF.getText().equals(" ")
+               ||cTF.getText().equals(" ")
+                   
+                   ) {
+            
+        } else {
+          tipoLabel.setText("NÃO É um triângulo!");
+            tipoLabel.setForeground(Color.red);
+            areaLabel.setText("");
+        }
+        JOptionPane.showMessageDialog(
+                null,
+                "Você me clicou!",
+                "Exemplo JOption",
+               //JOptionPane.INFORMATION_MESSAGE
+              //JOptionPane.WARNING_MESSAGE
+             //JOptionPane.ERROR_MESSAGE
+            //JOptionPane.QUESTION_MESSAGE
+                JOptionPane.PLAIN_MESSAGE
+               
+        );
+        
         double a = Double.parseDouble(aTF.getText());
         double b = Double.parseDouble(bTF.getText());
         double c = Double.parseDouble(cTF.getText());
